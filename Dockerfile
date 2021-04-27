@@ -1,4 +1,3 @@
-#FROM jlesage/firefox
 FROM python:alpine
 
 WORKDIR /tmp
@@ -11,3 +10,6 @@ RUN cp -rp geckodriver /usr/local/bin/geckodriver
 RUN pip install selenium
 RUN pip install pytest
 
+WORKDIR /test
+
+CMD ["python", "-m", "pytest", "/test/*.py"]
