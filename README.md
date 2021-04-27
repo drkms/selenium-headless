@@ -8,7 +8,7 @@ This image may help you to run tests inside a container from command line on the
 
 Supposing you have a test, or many of them, with the name obviously ending with ".py" extension, you can run :
 ```shell
-docker run -v$PWD:/test -ti selenium-headless:3.0 python -m pytest *.py
+docker run -v$PWD:/test -ti drkms/selenium-headless:3.0 python -m pytest *.py
 ```
 
 The build of the selenium-headless:3.0 works with Firefox 88 and Geckodriver 0.29.1.
